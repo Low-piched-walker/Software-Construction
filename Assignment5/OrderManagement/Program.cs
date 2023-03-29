@@ -220,15 +220,15 @@ namespace OrderManagement
 
             // 修改订单
             Console.WriteLine("修改订单：");
-            Order newOrder = new Order("2022001", "王五", new List<OrderDetails> { new OrderDetails("商品1", 10, 2), new OrderDetails("商品2", 20, 1), new OrderDetails("商品5", 50, 2) });
+            Order newOrder = new Order("2023001", "王五", new List<OrderDetails> { new OrderDetails("商品1", 10, 2), new OrderDetails("商品2", 20, 1), new OrderDetails("商品5", 50, 2) });
             orderService.ModifyOrder(newOrder);
-            order = orderService.GetOrder("2022001");
+            order = orderService.GetOrder("2023001");
             Console.WriteLine(order);
             Console.WriteLine();
 
             // 删除订单
             Console.WriteLine("删除订单：");
-            orderService.RemoveOrder("2022002");
+            orderService.RemoveOrder("2023002");
             orderService.ShowAllOrders();
 
             Console.ReadKey();
